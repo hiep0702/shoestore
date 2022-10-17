@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -26,6 +27,13 @@ Route::get('/user/{id}',[UserController::class,'show']);
 Route::post('/user',[UserController::class,'store']);
 Route::put('/user/{id}',[UserController::class,'update']);
 Route::delete('/user/{id}',[UserController::class,'destroy']);
+
+//Brand
+Route::get('/brand',[BrandController::class,'index']);
+Route::get('/brand/{id}',[BrandController::class,'show']);
+Route::post('/brand',[BrandController::class,'store']);
+Route::put('/brand/{id}',[BrandController::class,'update']);
+Route::delete('/brand/{id}',[BrandController::class,'destroy']);
 
 //Product
 Route::get('/product',[ProductController::class,'index']);
